@@ -1,0 +1,58 @@
+@SpringBootApplication
+自动装配原理
+主要的俩个注解
+XXXX Configuration
+XXXX Properties
+使用thymeleaf模板：
+th:xx @{} 替换原有的超链接   th:href="@{/css/bootstrap.min.css}"
+step1、以下是在i18n文件夹下配置的参数：
+    login.btn=sign in
+    login.password=Password
+    login.remember=remrember me
+    login.tip=Please Login in
+    login.username=username
+step2、在加上在properties配置文件配置 spring.messages.basename=i18n.login
+
+step3、th:xx #{} 国际化消息表达式   th:text="#{login.tip}"   th:text="#{login.username}" th"text="#{login.password}" 
+                                  [[#{login.btn}]] [[#{login.remember}]]
+
+public class Demo {
+
+pritave  static TestDemo testDemo  ;
+
+public static TestDemo getInstance (){
+	if(testDemo == null){
+	testDemo = new TestDemo();
+}
+return testDemo;
+}
+}
+@SpringBootApplication
+public class Demo2 {
+
+public static void main (String[]args){
+SpringApplication.run(Demo2.class,args)
+}
+}
+git reset --hard 版本号
+
+git branch -v 查看分支状态
+
+git branch 分支名 创建分支
+
+git checkout 分支名 切换分支
+
+git merge 分支名 分支的合并
+
+merge 在Master上产生合并冲突问题
+
+hot-fix 出现merge冲突问题
+
+git remote add 别名 远程http地址  给远程地址起别名
+
+git remote -v 查看别名
+
+git  push 别名 分支	   推送本地分支上的内容到远程仓库
+
+git pull 别名 分支     将远程仓库中的数据与本地仓库中的数据进行同步
+
