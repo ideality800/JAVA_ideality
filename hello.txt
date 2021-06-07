@@ -34,4 +34,4 @@ public static void main (String[]args){
 SpringApplication.run(Demo2.class,args)
 }
 }
-
+git reset --head 版本号
