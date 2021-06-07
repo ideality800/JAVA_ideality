@@ -16,7 +16,15 @@ step2、在加上在properties配置文件配置 spring.messages.basename=i18n.l
 step3、th:xx #{} 国际化消息表达式   th:text="#{login.tip}"   th:text="#{login.username}" th"text="#{login.password}" 
                                   [[#{login.btn}]] [[#{login.remember}]]
 
+public class Demo {
 
+pritave  static TestDemo testDemo  ;
 
+public static TestDemo getInstance (){
+	if(testDemo == null){
+	testDemo = new TestDemo();
+}
+return testDemo;
+}
 
-
+}
