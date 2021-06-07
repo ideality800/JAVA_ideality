@@ -26,5 +26,12 @@ public static TestDemo getInstance (){
 }
 return testDemo;
 }
-
 }
+@SpringBootApplication
+public class Demo2 {
+
+public static void main (String[]args){
+SpringApplication.run(Demo2.class,args)
+}
+}
+
